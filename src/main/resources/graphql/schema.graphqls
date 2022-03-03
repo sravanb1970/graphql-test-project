@@ -1,0 +1,38 @@
+type Query {
+	helloWorld: String!
+	greetingMessage(firstName:String!,lastName:String):String!
+	message: Message!
+	rollDice: [Int!]! #this means we cannot return null and we can't return empty array as well 
+	#authors: [Author]
+}
+
+type Author {
+	id: ID
+	name: String
+	email: String
+	
+}
+
+type Post {
+	id: ID!
+	title: String!
+	description: String
+	category: String
+	author: Author!	
+
+}
+
+type Message {
+	id: ID!
+	text: String!
+}
+
+type Post {
+	id: ID!
+	title: String!
+}
+
+type Comment {
+	id: ID!
+	text: String
+}
